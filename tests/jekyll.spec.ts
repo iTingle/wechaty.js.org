@@ -55,7 +55,7 @@ const getImageList = (filename: string): string[] => {
   const content = fs.readFileSync(filename).toString()
 
   // https://stackoverflow.com/a/37981325
-  const REGEXP = /!\[[^\]]*?\]\((.*?)\)/g
+  const REGEXP = /!\[[^\]]*?\]\(([^\s]*?)\s*\S*\s*\)/g
 
   const imageList: string[] = []
 
